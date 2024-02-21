@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>初始java</title>
+      <link href="/2024/02/21/%E5%88%9D%E8%AF%86Java/"/>
+      <url>/2024/02/21/%E5%88%9D%E8%AF%86Java/</url>
+      
+        <content type="html"><![CDATA[<h1 id="初始Java"><a href="#初始Java" class="headerlink" title="初始Java"></a>初始Java</h1><h2 id="一、Java语言平台版本"><a href="#一、Java语言平台版本" class="headerlink" title="一、Java语言平台版本"></a>一、Java语言平台版本</h2><ul><li>J2SE(Java 2 Platform Standard Edition)标准版</li></ul><blockquote><p>是为开发普通桌面和商务应用程序提供的解决方案</p><p>该技术体系是其他两者的基础，可以完成一些桌面应用程序的开发</p></blockquote><ul><li>J2ME(Java 2 Platform Micro Edition)小型版</li></ul><blockquote><p>是为开发电子消费产品和嵌入式设备提供的解决方案(几乎不使用)</p></blockquote><ul><li>J2EE(Java 2 Platform Enterprise Edition)企业版</li></ul><blockquote><p>是为开发企业环境下的应用程序提供的一套解决方案</p><p>该技术体系中包含的技术如 Servlet、Jsp等，主要针对于Web应用程序开发</p></blockquote><h2 id="二、Java语言特点"><a href="#二、Java语言特点" class="headerlink" title="二、Java语言特点"></a>二、Java语言特点</h2><h3 id="1-优点"><a href="#1-优点" class="headerlink" title="1.优点"></a>1.优点</h3><ul><li><p>高性能：</p><ul><li><p>Java最初发展阶段，总是被人诟病“<code>性能低</code>”；客观上，高级语言运行效率总是低于低级语言的，这个无法避免。Java语言本身发展中通过虚拟机的优化提升了<code>几十倍运行效率</code>。比如，通过JIT(JUST IN TIME)即时编译技术提高运行效率。</p></li><li><p><code>Java低性能的短腿，已经被完全解决了</code>。业界发展上，我们也看到很多C++应用转到Java开发，很多C++程序员转型为Java程序员。</p></li></ul></li><li><p>简单性：</p><p>Java就是C++语法的<code>简化版</code>，我们也可以将Java称之为“<code>C++--</code>”。比如：头文件，指针运算，结构，联合，操作符重载，虚基类等。</p></li><li><p>面向对象性：</p><p>​面向对象是一种程序设计技术，非常<code>适合大型软件的设计和开发</code>。面向对象编程支持封装、继承、多态等特性，让程序更好达到<code>高内聚</code>，<code>低耦合</code>的标准。</p></li><li><p>健壮性：</p><p>​吸收了C&#x2F;C++语言的优点，但去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供了一个相对安全的内存管理和访问机制。</p></li><li><p>安全性：</p><p>​Java适合于网络&#x2F;分布式环境，需要提供一个安全机制以防恶意代码的攻击。如：<code>安全防范机制</code>（ClassLoader类加载器），可以分配不同的命名空间以防替代本地的同名类、字节代码检查。</p></li><li><p>跨平台性：</p><p>​这是Java的核心优势。Java在最初设计时就很注重移植和跨平台性。比如：Java的int永远都是32位。不像C++可能是16，32，可能是根据编译器厂商规定的变化</p><blockquote><p>什么是跨平台性？</p><p>通过Java语言编写的应用程序在不同的系统平台上都可以运行。</p><p>原理:</p><p>只要在需要运行java应用程序的操作系统上，</p><p>先安装一个Java虚拟机(JVM Java Virtual Machine)即可。</p><p>由JVM来负责Java程序在该系统中的运行。</p></blockquote></li></ul><h3 id="2-缺点"><a href="#2-缺点" class="headerlink" title="2.缺点"></a>2.缺点</h3><ul><li><code>语法过于复杂、严谨</code>，对程序员的约束比较多，与python、php等相比入门较难。但是一旦学会了，就业岗位需求量大，而且<code>薪资待遇节节攀升</code>。</li><li>一般适用于大型网站开发，<code>整个架构会比较重</code>，对于初创公司开发和维护人员的成本比较高（即薪资高），选择用Java语言开发网站或应用系统的需要一定的经济实力。</li><li><code>并非适用于所有领域</code>。比如，Objective C、Swift在iOS设备上就有着无可取代的地位。浏览器中的处理几乎完全由JavaScript掌控。Windows程序通常都用C++或C#编写。Java在服务器端编程和跨平台客户端应用领域则很有优势。</li></ul><h2 id="三、JDK-JRE与JVM"><a href="#三、JDK-JRE与JVM" class="headerlink" title="三、JDK,JRE与JVM"></a>三、JDK,JRE与JVM</h2><ul><li>JVM，即Java虚拟机(JVM Java Virtual Machine)，由JVM来负责Java程序在对应系统中的运行，Java语言本身没有跨平台性，它的跨平台性由JVM保障</li><li>JRE，即Java运行环境(Java Runtime Environment)，包括<strong>JVM</strong>( Java虚拟机 Java Virtual Machine)和Java程序所需的<strong>核心类库</strong>等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</li><li>JDK，即Java开发工具包(Java Development Kit)，JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了<strong>JRE</strong>。所以安装了JDK，就不用在单独安装JRE了。其中的开发工具：编译工具(javac.exe) 打包工具(jar.exe)等</li></ul><p>简单而言：使用JDK开发完成的java程序，交给JRE去运行。</p><blockquote><p> 公式：</p><ul><li>JDK &#x3D; JRE + 开发工具集</li><li>JRE &#x3D; JVM + Java SE标准类库</li></ul></blockquote><p>常用JDK版本：Java8  Java11  Java17</p><h2 id="四、JDK的安装部署"><a href="#四、JDK的安装部署" class="headerlink" title="四、JDK的安装部署"></a>四、JDK的安装部署</h2><h3 id="1-JDK下载"><a href="#1-JDK下载" class="headerlink" title="1.JDK下载"></a>1.JDK下载</h3><p><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p><h3 id="2-安装JDK"><a href="#2-安装JDK" class="headerlink" title="2.安装JDK"></a>2.安装JDK</h3><h3 id="3-环境变量"><a href="#3-环境变量" class="headerlink" title="3.环境变量"></a>3.环境变量</h3><blockquote><p>右击此电脑–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;系统变量<br>配置Path环境变量(必须配置的)（目的：为了可以在任意目录下找到javac和java命令）<br>    方式1：直接在Path变量中添加jdk的bin目录的完整路径<br>        系统变量–&gt;Path–&gt;新建–&gt;D:\soft\java\jdk\bin<br>    方式2：（推荐）使用另外一个变量存储jdk的安装目录，使用%的方式进行引用<br>配置CLASSPATH环境变量(选配) (目的：为了让class文件可以在任意目录下被找到)</p></blockquote><h2 id="五、Java代码运行原理"><a href="#五、Java代码运行原理" class="headerlink" title="五、Java代码运行原理"></a>五、Java代码运行原理</h2><blockquote><p>首先编写java源代码程序，扩展名.java</p><p>在命令行模式中，输入javac命令对源代码进行编译，生成字节码文件</p><p>javac 源文件名.class</p><p>编译完成后，如果没有报错信息，输入java命令对class字节码文件进行解释运行,执行时不需要添加.class扩展名</p><p>java HelloWorld</p></blockquote><p><img src="https://gitee.com/zhi-tu/image_demo1/raw/master/img/image-20240220192620176.png" alt="image-20240220192620176"></p><h2 id="六、IDEA安装部署"><a href="#六、IDEA安装部署" class="headerlink" title="六、IDEA安装部署"></a>六、IDEA安装部署</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h3><blockquote><p><a href="https://www.jetbrains.com/idea/download/?section=windows">https://www.jetbrains.com/idea/download/?section=windows</a></p></blockquote><h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MarkDown基本使用语法</title>
       <link href="/2024/02/14/markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95/"/>
       <url>/2024/02/14/markdown%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
@@ -15,25 +34,6 @@
         <tags>
             
             <tag> markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MarkDown基本使用语法</title>
-      <link href="/2024/02/14/%E5%88%9D%E8%AF%86Java/"/>
-      <url>/2024/02/14/%E5%88%9D%E8%AF%86Java/</url>
-      
-        <content type="html"><![CDATA[<h1 id="初始Java"><a href="#初始Java" class="headerlink" title="初始Java"></a>初始Java</h1><h2 id="一、Java语言平台版本"><a href="#一、Java语言平台版本" class="headerlink" title="一、Java语言平台版本"></a>一、Java语言平台版本</h2><ul><li>J2SE(Java 2 Platform Standard Edition)标准版</li></ul><blockquote><p>是为开发普通桌面和商务应用程序提供的解决方案</p><p>该技术体系是其他两者的基础，可以完成一些桌面应用程序的开发</p></blockquote><ul><li>J2ME(Java 2 Platform Micro Edition)小型版</li></ul><blockquote><p>是为开发电子消费产品和嵌入式设备提供的解决方案(几乎不使用)</p></blockquote><ul><li>J2EE(Java 2 Platform Enterprise Edition)企业版</li></ul><blockquote><p>是为开发企业环境下的应用程序提供的一套解决方案</p><p>该技术体系中包含的技术如 Servlet、Jsp等，主要针对于Web应用程序开发</p></blockquote><h2 id="二、Java语言特点"><a href="#二、Java语言特点" class="headerlink" title="二、Java语言特点"></a>二、Java语言特点</h2><h3 id="1-优点"><a href="#1-优点" class="headerlink" title="1.优点"></a>1.优点</h3><ul><li><p>高性能：</p><ul><li><p>Java最初发展阶段，总是被人诟病“<code>性能低</code>”；客观上，高级语言运行效率总是低于低级语言的，这个无法避免。Java语言本身发展中通过虚拟机的优化提升了<code>几十倍运行效率</code>。比如，通过JIT(JUST IN TIME)即时编译技术提高运行效率。</p></li><li><p><code>Java低性能的短腿，已经被完全解决了</code>。业界发展上，我们也看到很多C++应用转到Java开发，很多C++程序员转型为Java程序员。</p></li></ul></li><li><p>简单性：</p><p>Java就是C++语法的<code>简化版</code>，我们也可以将Java称之为“<code>C++--</code>”。比如：头文件，指针运算，结构，联合，操作符重载，虚基类等。</p></li><li><p>面向对象性：</p><p>​面向对象是一种程序设计技术，非常<code>适合大型软件的设计和开发</code>。面向对象编程支持封装、继承、多态等特性，让程序更好达到<code>高内聚</code>，<code>低耦合</code>的标准。</p></li><li><p>健壮性：</p><p>​吸收了C&#x2F;C++语言的优点，但去掉了其影响程序健壮性的部分（如指针、内存的申请与释放等），提供了一个相对安全的内存管理和访问机制。</p></li><li><p>安全性：</p><p>​Java适合于网络&#x2F;分布式环境，需要提供一个安全机制以防恶意代码的攻击。如：<code>安全防范机制</code>（ClassLoader类加载器），可以分配不同的命名空间以防替代本地的同名类、字节代码检查。</p></li><li><p>跨平台性：</p><p>​这是Java的核心优势。Java在最初设计时就很注重移植和跨平台性。比如：Java的int永远都是32位。不像C++可能是16，32，可能是根据编译器厂商规定的变化</p><blockquote><p>什么是跨平台性？</p><p>通过Java语言编写的应用程序在不同的系统平台上都可以运行。</p><p>原理:</p><p>只要在需要运行java应用程序的操作系统上，</p><p>先安装一个Java虚拟机(JVM Java Virtual Machine)即可。</p><p>由JVM来负责Java程序在该系统中的运行。</p></blockquote></li></ul><h3 id="2-缺点"><a href="#2-缺点" class="headerlink" title="2.缺点"></a>2.缺点</h3><ul><li><code>语法过于复杂、严谨</code>，对程序员的约束比较多，与python、php等相比入门较难。但是一旦学会了，就业岗位需求量大，而且<code>薪资待遇节节攀升</code>。</li><li>一般适用于大型网站开发，<code>整个架构会比较重</code>，对于初创公司开发和维护人员的成本比较高（即薪资高），选择用Java语言开发网站或应用系统的需要一定的经济实力。</li><li><code>并非适用于所有领域</code>。比如，Objective C、Swift在iOS设备上就有着无可取代的地位。浏览器中的处理几乎完全由JavaScript掌控。Windows程序通常都用C++或C#编写。Java在服务器端编程和跨平台客户端应用领域则很有优势。</li></ul><h2 id="三、JDK-JRE与JVM"><a href="#三、JDK-JRE与JVM" class="headerlink" title="三、JDK,JRE与JVM"></a>三、JDK,JRE与JVM</h2><ul><li>JVM，即Java虚拟机(JVM Java Virtual Machine)，由JVM来负责Java程序在对应系统中的运行，Java语言本身没有跨平台性，它的跨平台性由JVM保障</li><li>JRE，即Java运行环境(Java Runtime Environment)，包括<strong>JVM</strong>( Java虚拟机 Java Virtual Machine)和Java程序所需的<strong>核心类库</strong>等，如果想要运行一个开发好的Java程序，计算机中只需要安装JRE即可。</li><li>JDK，即Java开发工具包(Java Development Kit)，JDK是提供给Java开发人员使用的，其中包含了java的开发工具，也包括了<strong>JRE</strong>。所以安装了JDK，就不用在单独安装JRE了。其中的开发工具：编译工具(javac.exe) 打包工具(jar.exe)等</li></ul><p>简单而言：使用JDK开发完成的java程序，交给JRE去运行。</p><blockquote><p> 公式：</p><ul><li>JDK &#x3D; JRE + 开发工具集</li><li>JRE &#x3D; JVM + Java SE标准类库</li></ul></blockquote><p>常用JDK版本：Java8  Java11  Java17</p><h2 id="四、JDK的安装部署"><a href="#四、JDK的安装部署" class="headerlink" title="四、JDK的安装部署"></a>四、JDK的安装部署</h2><h3 id="1-JDK下载"><a href="#1-JDK下载" class="headerlink" title="1.JDK下载"></a>1.JDK下载</h3><p><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p><h3 id="2-安装JDK"><a href="#2-安装JDK" class="headerlink" title="2.安装JDK"></a>2.安装JDK</h3><h3 id="3-环境变量"><a href="#3-环境变量" class="headerlink" title="3.环境变量"></a>3.环境变量</h3><blockquote><p>右击此电脑–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;系统变量<br>配置Path环境变量(必须配置的)（目的：为了可以在任意目录下找到javac和java命令）<br>    方式1：直接在Path变量中添加jdk的bin目录的完整路径<br>        系统变量–&gt;Path–&gt;新建–&gt;D:\soft\java\jdk\bin<br>    方式2：（推荐）使用另外一个变量存储jdk的安装目录，使用%的方式进行引用<br>配置CLASSPATH环境变量(选配) (目的：为了让class文件可以在任意目录下被找到)</p></blockquote><h2 id="五、Java代码运行原理"><a href="#五、Java代码运行原理" class="headerlink" title="五、Java代码运行原理"></a>五、Java代码运行原理</h2><blockquote><p>首先编写java源代码程序，扩展名.java</p><p>在命令行模式中，输入javac命令对源代码进行编译，生成字节码文件</p><p>javac 源文件名.class</p><p>编译完成后，如果没有报错信息，输入java命令对class字节码文件进行解释运行,执行时不需要添加.class扩展名</p><p>java HelloWorld</p></blockquote><p><img src="https://gitee.com/zhi-tu/image_demo1/raw/master/img/image-20240220192620176.png" alt="image-20240220192620176"></p><h2 id="六、IDEA安装部署"><a href="#六、IDEA安装部署" class="headerlink" title="六、IDEA安装部署"></a>六、IDEA安装部署</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h3><blockquote><p><a href="https://www.jetbrains.com/idea/download/?section=windows">https://www.jetbrains.com/idea/download/?section=windows</a></p></blockquote><h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> java </tag>
             
         </tags>
       
@@ -86,6 +86,17 @@
     
     
     <entry>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
@@ -102,17 +113,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[<p>python<br>markdown</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
