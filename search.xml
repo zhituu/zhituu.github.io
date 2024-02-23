@@ -140,22 +140,22 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title></title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>后期更新：</p><p>更换背景图片</p><p>添加评论功能</p><p>添加访客记录功能</p><p>添加网站累计运行时间</p><p>添加文章封面</p><p>添加打赏功能</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<p>后期更新：</p><p>更换背景图片</p><p>添加评论功能</p><p>添加访客记录功能</p><p>添加网站累计运行时间</p><p>添加文章封面</p><p>添加打赏功能</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
